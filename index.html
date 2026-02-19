@@ -81,6 +81,14 @@ h1{
 .small{
   color:#cfcfcf;
 }
+  #particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+  }
 </style>
 </head>
 
@@ -130,6 +138,22 @@ Hi, I'm Heet — a developer passionate about apps, cybersecurity and modern web
 </div>
 
 </div>
+<!-- Floating Particles Effect -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
+<div id="particles-js"></div>
+
+<script>
+particlesJS("particles-js", {
+  "particles":{
+    "number":{"value":60},
+    "color":{"value":"#0b5cff"},
+    "shape":{"type":"circle"},
+    "opacity":{"value":0.5},
+    "size":{"value":3},
+    "move":{"enable":true,"speed":2}
+  }
+});
+</script>
 </body>
 </html>
