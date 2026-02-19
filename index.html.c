@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HeetDevLab</title>
+</head>
+
+<body style="background:black;color:white;text-align:center;font-family:sans-serif;">
+
+<h1>HeetDevLab 🚀</h1>
+<p>Welcome to my official developer website</p>
+
+<a href="/Sentinex/" 
+style="background:blue;color:white;padding:12px 20px;text-decoration:none;border-radius:8px;">
+Open Sentinex
+</a>
+
+</body>
+</html>
