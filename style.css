@@ -18,10 +18,7 @@ body::after{
   z-index:-2;
 }
 
-@keyframes blueSweep{
-  0%{ transform:translateX(0);}
-  100%{ transform:translateX(50%);}
-}
+
 
 @keyframes blueMove{
   0%{ transform:translateX(0); }
