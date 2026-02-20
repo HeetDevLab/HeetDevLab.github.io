@@ -91,11 +91,13 @@ border:1px solid rgba(255,255,255,0.08);
 box-shadow:0 0 25px rgba(0,0,0,0.6);
 transition:0.4s ease;
 overflow:hidden;
+z-index:2;
 }
 
 /* HOLOGRAM GLOW LAYER */
 .card::before{
 content:"";
+pointer-events:none;
 position:absolute;
 top:-50%;
 left:-50%;
