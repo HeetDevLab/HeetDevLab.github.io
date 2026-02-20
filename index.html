@@ -100,6 +100,16 @@ particlesJS("particles-js",{
 "move":{"enable":true,"speed":1}
 }
 });
+// Add Pulse Glow on Load
+window.addEventListener("load", function(){
+
+const btn = document.querySelector(".download-btn");
+
+if(btn){
+btn.classList.add("pulse");
+}
+
+});
 </script>
 
 </body>
