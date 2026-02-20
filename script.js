@@ -20,3 +20,14 @@ particlesJS("particles-js",{
 }
 }
 });
+const card = document.querySelector(".card");
+
+if(card){
+card.addEventListener("click", function(){
+card.classList.add("clicked");
+
+setTimeout(() => {
+card.classList.remove("clicked");
+}, 400);
+});
+}
