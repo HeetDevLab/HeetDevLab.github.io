@@ -1,14 +1,26 @@
 
-/* MOVING BLUE GLOW BACKGROUND */
-body{
-margin:0;
-font-family:Arial,sans-serif;
-color:white;
-bgcolor:blue;
-text-align:center;
-background:linear-gradient(270deg,#020024,#090979,#000000);
-background-size:600% 600%;
-animation:bgmove 12s ease infinite;
+/* ===== MOVING BLUE GLOW ===== */
+body::after{
+  content:"";
+  position:fixed;
+  top:0;
+  left:-60%;
+  width:220%;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(11,92,255,0.25),
+    transparent
+  );
+  filter:blur(90px);
+  animation:blueSweep 14s linear infinite;
+  z-index:-2;
+}
+
+@keyframes blueSweep{
+  0%{ transform:translateX(0);}
+  100%{ transform:translateX(50%);}
 }
 
 @keyframes blueMove{
