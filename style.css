@@ -1,29 +1,4 @@
 
-/* ===== MOVING BLUE GLOW ===== */
-body::after{
-  content:"";
-  position:fixed;
-  top:0;
-  left:-60%;
-  width:220%;
-  height:100%;
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(11,92,255,0.25),
-    transparent
-  );
-  filter:blur(90px);
-  animation:blueSweep 14s linear infinite;
-  z-index:-2;
-}
-
-
-
-@keyframes blueMove{
-  0%{ transform:translateX(0); }
-  100%{ transform:translateX(50%); }
-}
 /* NAVBAR */
 .navbar{
 position:sticky;
@@ -151,4 +126,28 @@ height:100%;
 top:0;
 left:0;
 z-index:-1;
+}
+/* ===== STRONG MOVING BLUE GLOW ===== */
+body::before{
+  content:"";
+  position:fixed;
+  top:-20%;
+  left:-60%;
+  width:220%;
+  height:140%;
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(11,92,255,0.35) 50%,
+    transparent 100%
+  );
+  filter:blur(120px);
+  animation:glowMove 16s linear infinite;
+  z-index:-2;
+  pointer-events:none;
+}
+
+@keyframes glowMove{
+  0%{ transform:translateX(0);}
+  100%{ transform:translateX(50%);}
 }
