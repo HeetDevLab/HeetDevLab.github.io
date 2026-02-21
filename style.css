@@ -175,7 +175,83 @@ width:95px;
 filter:drop-shadow(0 0 35px #0b5cff);
 margin-bottom:15px;
 }
+/* 🚀 Ecosystem Section */
+.ecosystem {
+  padding: 80px 10%;
+  text-align: center;
+}
 
+.ecosystem h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #00c3ff;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.eco-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,195,255,0.2);
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.eco-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00c3ff;
+  border-color: #00c3ff;
+}
+
+.eco-card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.eco-card p {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.live-badge,
+.soon-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.live-badge {
+  background: #00ff88;
+  color: black;
+}
+
+.soon-badge {
+  background: #ff9800;
+  color: black;
+}
+
+.eco-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: #00c3ff;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.eco-btn:hover {
+  background: white;
+}
 section{
 margin-top:80px;
 }
