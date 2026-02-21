@@ -17,13 +17,17 @@ z-index:-1;
 }
 
 .navbar{
-position:sticky;
+position:fixed;
 top:0;
-background:rgba(0,0,0,0.6);
+left:0;
+width:100%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
 padding:14px;
 display:flex;
 justify-content:center;
 gap:25px;
+z-index:1000;   /* IMPORTANT */
 }
 
 .navbar a{
@@ -37,7 +41,7 @@ color:#0b5cff;
 }
 
 .container{
-padding:80px 20px;
+padding:120px 20px 80px;   /* pehle 80 tha, ab 120 */
 max-width:900px;
 margin:auto;
 }
