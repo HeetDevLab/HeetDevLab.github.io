@@ -190,10 +190,11 @@ margin-bottom:15px;
   margin-bottom: 40px;
 }
 .ecosystem h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   margin-bottom: 40px;
   color: #00c3ff;
-  margin-bottom: 10px;
 }
 
 .eco-grid {
@@ -201,8 +202,11 @@ margin-bottom:15px;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
 }
-
 .eco-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
   background: linear-gradient(145deg, rgba(0,40,120,0.3), rgba(0,20,60,0.3));
   border: 1px solid rgba(0,195,255,0.3);
   padding: 25px;
@@ -257,6 +261,12 @@ margin-bottom:15px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,195,255,0.6);
+}
+
+.eco-btn:hover {
+  background: white;
+  box-shadow: 0 0 20px rgba(0,195,255,1);
 }
 
 .eco-btn:hover {
