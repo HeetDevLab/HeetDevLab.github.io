@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heetdevlab.github.io/sitemap.xml
