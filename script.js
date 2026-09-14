@@ -1,63 +1,10 @@
-document.addEventListener("DOMContentLoaded", function(){
-
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-  const overlay = document.getElementById("navOverlay");
-  const links = navLinks.querySelectorAll("a");
-
-  hamburger.addEventListener("click", function(){
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("nav-open");
-  });
-
-  overlay.addEventListener("click", closeMenu);
-
-  links.forEach(link=>{
-    link.addEventListener("click", closeMenu);
-  });
-
-  function closeMenu(){
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.classList.remove("nav-open");
-  }
-
+document.addEventListener("DOMContentLoaded",()=>{
+  const btn=document.getElementById("menuBtn"), links=document.getElementById("navLinks"), backdrop=document.getElementById("menuBackdrop");
+  const close=()=>{links.classList.remove("active");backdrop.classList.remove("active");btn.setAttribute("aria-expanded","false")};
+  btn?.addEventListener("click",()=>{const open=links.classList.toggle("active");backdrop.classList.toggle("active",open);btn.setAttribute("aria-expanded",open)});
+  backdrop?.addEventListener("click",close);
+  links?.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));
 });
-if (typeof particlesJS !== "undefined") {
-particlesJS("particles-js",{
-"particles":{
-"number":{"value":80},
-"color":{"value":"#0b5cff"},
-"shape":{"type":"circle"},
-"opacity":{"value":0.5},
-"size":{"value":3},
-"line_linked":{
-"enable":true,
-"distance":150,
-"color":"#0b5cff",
-"opacity":0.4,
-"width":1
-},
-"move":{"enable":true,"speed":1.5}
-},
-"interactivity":{
-"events":{
-"onhover":{"enable":true,"mode":"grab"}
-}
-}
-});
-}
-const card = document.querySelector(".card");
-
-if(card){
-card.addEventListener("click", function(){
-card.classList.add("clicked");
-
-setTimeout(() => {
-card.classList.remove("clicked");
-}, 400);
-});
+if(typeof particlesJS!=="undefined"){
+  particlesJS("particles-js",{particles:{number:{value:45,density:{enable:true,value_area:900}},color:{value:"#1477ff"},shape:{type:"circle"},opacity:{value:.35},size:{value:2.5},line_linked:{enable:true,distance:155,color:"#1477ff",opacity:.22,width:1},move:{enable:true,speed:.7}},interactivity:{events:{onhover:{enable:true,mode:"grab"}}}});
 }
