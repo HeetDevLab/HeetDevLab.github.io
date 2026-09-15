@@ -11,6 +11,61 @@
 <title>HeetDevLab | Privacy-First Android Security</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+    <style>
+  /* ===== HeetDevLab UNIVERSAL MOBILE NAV FIX ===== */
+.navbar{z-index:5000!important;}
+.nav-container{position:relative;z-index:5002!important;}
+.hamburger{
+  position:relative!important;
+  width:36px!important;
+  height:36px!important;
+  display:none;
+  flex:0 0 36px;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-direction:column!important;
+  gap:0!important;
+  cursor:pointer;
+  z-index:5005!important;
+  -webkit-tap-highlight-color:transparent;
+}
+.hamburger span{
+  position:absolute!important;
+  left:5px!important;
+  width:26px!important;
+  height:3px!important;
+  margin:0!important;
+  display:block!important;
+  background:#fff!important;
+  border-radius:99px!important;
+  transform-origin:center!important;
+  transition:transform .25s ease,opacity .2s ease,top .25s ease!important;
+}
+.hamburger span:nth-child(1){top:9px!important;}
+.hamburger span:nth-child(2){top:16.5px!important;}
+.hamburger span:nth-child(3){top:24px!important;}
+.hamburger.active span:nth-child(1){top:16.5px!important;transform:rotate(45deg)!important;}
+.hamburger.active span:nth-child(2){opacity:0!important;transform:scaleX(0)!important;}
+.hamburger.active span:nth-child(3){top:16.5px!important;transform:rotate(-45deg)!important;}
+.nav-overlay{z-index:4998!important;}
+.nav-links{z-index:5001!important;}
+@media(max-width:768px){
+  .hamburger{display:flex!important;}
+  .nav-links{z-index:5001!important;}
+}
+    /* ===== Premium HeetDevLab Navbar Branding ===== */
+.nav-brand{display:flex!important;align-items:center!important;}
+.nav-brand>a{display:inline-flex!important;align-items:center!important;gap:9px!important;text-decoration:none!important;line-height:1!important;}
+.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid rgba(24,215,232,.38);border-radius:9px;background:linear-gradient(135deg,rgba(24,215,232,.14),rgba(22,89,255,.10));box-shadow:0 0 18px rgba(24,215,232,.10),inset 0 0 14px rgba(24,215,232,.05);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:-1px;color:#18d7e8;}
+.brand-name{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;font-size:25px!important;font-weight:800!important;letter-spacing:-1.15px!important;color:#f4f8ff!important;text-shadow:0 0 22px rgba(24,215,232,.08);}
+.brand-name span{background:linear-gradient(90deg,#18d7e8,#5ee7ff);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.brand-name b{color:#18d7e8;font-weight:900;text-shadow:0 0 12px rgba(24,215,232,.55);}
+@media(max-width:768px){
+ .nav-brand>a{gap:8px!important;}
+ .brand-mark{width:28px;height:28px;border-radius:8px;font-size:11px;}
+ .brand-name{font-size:23px!important;letter-spacing:-1px!important;}
+}
+    </style>
 </head>
 <body>
 <div id="particles-js"></div>
@@ -32,12 +87,15 @@
   </div>
 </nav>
   -->
-  <nav class="navbar">
+<nav class="navbar">
  <div class="nav-overlay" id="navOverlay"></div>
   <div class="nav-container">
 
     <div class="nav-brand">
-      <a href="/">HeetDevLab</a>
+      <a href="/" aria-label="HeetDevLab Home">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span class="brand-name">Heet<span>Dev</span>Lab<b>.</b></span>
+      </a>
     </div>
 
    <div class="hamburger" id="hamburger">
@@ -55,7 +113,7 @@
     </div>
 
   </div>
-  </nav>
+</nav>
 <div class="menu-backdrop" id="menuBackdrop"></div>
 
 <main>
