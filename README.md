@@ -45,21 +45,21 @@
 The website brings my Android applications, browser utilities, development articles and personal portfolio together in one place.
 
 ```text
-                         ┌──────────────────┐
-                         │    HEETDEVLAB    │
-                         └────────┬─────────┘
-                                  │
+                            ┌──────────────────┐
+                            │     HEETDEVLAB      │
+                            └────────┬─────────┘
+                                       │
           ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-          ▼                       ▼                       ▼
-     📱 Android               🌐 Web                 🤖 AI
-          │                       │                       │
-      Sentinex               WebTools                Nexora
-          │                       │                       │
+          │                           │                           │
+          ▼                          ▼                           ▼
+     📱 Android                    🌐 Web                       🤖 AI
+          │                           │                           │
+      Sentinex                     WebTools                     Nexora
+          │                           │                           │
           └───────────────────────┼───────────────────────┘
-                                  │
-                                  ▼
-                         💡 Future Projects
+                                      │
+                                      ▼
+                            💡 Future Projects
 ```
 
 ---
