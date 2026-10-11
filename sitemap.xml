@@ -13,30 +13,33 @@
     <loc>https://heetdevlab.github.io/Sentinex/</loc>
     <priority>0.8</priority>
   </url>
-
+<url>
+    <loc>https://heetdevlab.github.io/Sentinex-Vault/</loc>
+    <priority>0.7</priority>
+  </url>
 <url>
   <loc>https://heetdevlab.github.io/Webtools/</loc>
-  <priority>0.7</priority>
-</url>
-
-<url>
-  <loc>https://heetdevlab.github.io/Blog/</loc>
   <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://heetdevlab.github.io/Webtools/tools/password-generator.html</loc>
-<priority>0.5</priority>
+  <loc>https://heetdevlab.github.io/Blog/</loc>
+  <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://heetdevlab.github.io/Webtools/tools/password-checker.html</loc>
+<loc>https://heetdevlab.github.io/Webtools/tools/password-generator.html</loc>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>https://heetdevlab.github.io/Webtools/tools/hash-generator.html</loc>
+<loc>https://heetdevlab.github.io/Webtools/tools/password-checker.html</loc>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>https://heetdevlab.github.io/Webtools/tools/hash-generator.html</loc>
+<priority>0.2</priority>
 </url>
 
 </urlset>
