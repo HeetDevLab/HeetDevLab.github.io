@@ -24,13 +24,12 @@ HeetDevLab.github.io/
 │   │   └── site.css            # Main website design system
 │   ├── js/
 │   │   └── site.js             # Navigation and reveal interactions
-│   └── legacy/                 # Retired root styles/scripts (if retained)
 ├── favicon.png                # Browser icon
 ├── icon.jpg                   # Existing product/brand artwork
 ├── Sentinex Vault.svg         # Vault icon artwork
 ├── robots.txt                 # Crawler rules
 ├── sitemap.xml                # Search-engine URL map
-├── service-worker.js           # Legacy WebTools offline worker
+├── service-worker.js           # Existing offline worker
 └── README.md
 ```
 
