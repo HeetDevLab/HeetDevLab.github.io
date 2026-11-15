@@ -18,8 +18,9 @@
     window.addEventListener('resize', () => { if (window.innerWidth > 700) close(); });
   }
 
-  const items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealItems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reducedMotion) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -28,9 +29,22 @@
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
-    items.forEach(item => observer.observe(item));
+    revealItems.forEach(item => observer.observe(item));
   } else {
-    items.forEach(item => item.classList.add('visible'));
+    revealItems.forEach(item => item.classList.add('visible'));
+  }
+
+  // A restrained pointer glow adds depth on desktop without affecting touch devices.
+  if (window.matchMedia('(pointer:fine)').matches && !reducedMotion) {
+    let frame = 0;
+    window.addEventListener('pointermove', event => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        document.documentElement.style.setProperty('--pointer-x', event.clientX + 'px');
+        document.documentElement.style.setProperty('--pointer-y', event.clientY + 'px');
+        frame = 0;
+      });
+    }, { passive: true });
   }
 
   const year = document.querySelector('[data-year]');
